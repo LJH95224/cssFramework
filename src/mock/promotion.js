@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Mock from 'mockjs'
 import {getParamsFromRestful} from '@/utils/tools'
 
@@ -45,7 +46,7 @@ export default {
     const params = getParamsFromRestful(config.url, '/api/promotion/fastbuy-goods/:time');
 
     let list = '';
-    
+
     if (params['time'] == '00:00') {
       list = Mock.mock({
         "data|10": [
@@ -467,7 +468,7 @@ export default {
               "105",
               "106"
             ]
-          }    
+          }
         ]
       },
       "status": 200,
@@ -515,7 +516,7 @@ export default {
             "113",
             "114"
           ]
-        }    
+        }
       ]
     },
       "status": 200,
@@ -548,7 +549,7 @@ export default {
             "120",
             "121"
           ]
-        }    
+        }
       ],
       "status": 200,
       "msg": "请求成功"

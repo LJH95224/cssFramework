@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Mock from 'mockjs'
 import mall from './mall'
 import live from './live'

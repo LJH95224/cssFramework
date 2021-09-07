@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Mock from 'mockjs'
 
 export default {
@@ -5,7 +6,7 @@ export default {
   // 登录
   login: config => {
     const {account, password} = JSON.parse(config.body);
-    
+
     if(account == '123' && password == '123') {
       return Mock.mock({
         status: 200,
@@ -23,13 +24,13 @@ export default {
         data: {}
       })
     }
-    
+
   },
 
   // 获取我的信息
   getMe: config => {
     let data = '';
-    
+
     if (JSON.parse(config.body)['token'] == '4378488sdsd29399281xjdjfkdf') {
       data = {
         "data": {
@@ -52,7 +53,7 @@ export default {
 
   getChats: config => {
     let data = '';
-    
+
     if (JSON.parse(config.body)['token'] == '4378488sdsd29399281xjdjfkdf') {
       data = {
         "data": "暂未开发该功能",

@@ -1,10 +1,11 @@
+/* eslint-disable */
 import Mock from 'mockjs'
 import {getParamsFromRestful} from '@/utils/tools'
 
 export default {
-  
+
   // 获取商品类目
-  getCategorys: config => { 
+  getCategorys: config => {
     return Mock.mock({
       "data|20": [
         {
@@ -32,10 +33,10 @@ export default {
   },
 
   // 获取某种品类
-  getOneCategory: config => { 
+  getOneCategory: config => {
     const params = getParamsFromRestful(config.url, '/api/mall/categorys/:id');
     let list = '';
-    
+
     if(params['id'] == 0) {
       list = Mock.mock(
         {
@@ -321,7 +322,7 @@ export default {
     const params = getParamsFromRestful(config.url, '/api/live/lives/:id');
 
     let list = '';
-    
+
     if (params['id'] == 0) {
       list = Mock.mock({
         "data|10": [
@@ -492,7 +493,7 @@ export default {
     const params = getParamsFromRestful(config.url, '/api/mall/goods/:id');
 
     let list = '';
-    
+
     if (params['id'] == 0) {
       list = Mock.mock({
         "data|100": [
@@ -699,7 +700,7 @@ export default {
     const params = getParamsFromRestful(config.url, '/api/mall/goods-id/:name');
 
     let data = '';
-    
+
     if (params['name'] == 0) {
       data = {
         id: 0
@@ -724,7 +725,7 @@ export default {
       data = {
         id: 5
       }
-    } 
+    }
 
     return {
       status: 200,
@@ -738,7 +739,7 @@ export default {
     const params = getParamsFromRestful(config.url, '/api/live/lives/:id');
 
     let list = '';
-    
+
     if (params['id'] == 113) {
       list = Mock.mock({
         "data": {
@@ -759,7 +760,7 @@ export default {
           ]
         }
       })
-    
+
     } else if (params['id'] == 114) {
       list = Mock.mock({
         "data": {

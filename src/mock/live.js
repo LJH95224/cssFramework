@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Mock from 'mockjs'
 import {getParamsFromRestful} from '@/utils/tools'
 
@@ -30,7 +31,7 @@ export default {
                       {
                           "image": "https://s5.mogucdn.com/mlcdn/c45406/201015_647bbhc78i19id5g3j522a86c3lbf_640x960.jpg_100x100.jpg",
                           "price": "￥@integer(1, 100)"
-                      } 
+                      }
                   ],
               ],
               "id|+1": [
@@ -38,7 +39,7 @@ export default {
                   1,
                   2
               ]
-          }    
+          }
       ],
       "status": 200,
       "msg": "请求成功"
@@ -50,7 +51,7 @@ export default {
     const params = getParamsFromRestful(config.url, '/api/live/lives/:id');
 
     let list = '';
-    
+
     if (params['id'] == 0) {
       list = Mock.mock({
         data: {
